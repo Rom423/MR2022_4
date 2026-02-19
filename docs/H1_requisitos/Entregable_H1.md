@@ -59,7 +59,7 @@ El sistema incluye una interfaz digital con las siguientes capacidades:
 
 
 ## Diagrama de bloques
-
+![image](https://github.com/Rom423/MR2022_4/blob/97128ac7f0b16f4a9d5bc278beef6e9249167acd/Evidence/WhatsApp%20Image%202026-02-18%20at%2022.47.49.jpeg)
 
 
 
