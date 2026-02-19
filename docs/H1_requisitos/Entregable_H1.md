@@ -1,8 +1,6 @@
 # Hito 1 – Análisis y Requerimientos
 
 ## Descripción del problema
-Descripción del problema
-Aquí tienes una redacción cohesiva y técnica, presentada en un solo bloque de texto para facilitar su lectura continua:
 
 La empresa busca automatizar un sistema de cortinas industriales de grandes dimensiones (hasta 4x7 metros) diseñadas para la segregación de espacios y el control de accesos en entornos de alto tránsito peatonal y vehicular. El principal desafío técnico radica en la gestión de la carga, ya que el diseño incorpora barras metálicas de 35 kg por cada dos metros de ancho para asegurar la tensión de la estructura. Debido a su ubicación en zonas críticas de logística, es imperativo que el sistema integre requerimientos técnicos robustos, como motores de alto torque y estructuras reforzadas, junto con dispositivos de seguridad funcionales que incluyan sensores de presencia y paros de emergencia para mitigar riesgos de accidentes. Como fase inicial del proyecto, se desarrollará un prototipo a escala de 1 metro de ancho por 2 metros de largo, utilizando una malla sintética tensada por una barra metálica de entre 1 y 2 kilogramos, con el fin de validar la lógica de automatización y la eficiencia del mecanismo de elevación antes de su implementación a escala real.
 
