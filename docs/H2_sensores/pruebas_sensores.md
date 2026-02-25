@@ -139,12 +139,12 @@ El sistema responde para los dos sensores sin fallos.
 
 | Caso | Resultado | Observaciones |
 |--------|-------------|----------------|
-| CP-01 | PASS / FAIL |                |
-| CP-02 | PASS / FAIL |                |
-| CP-03 | PASS / FAIL |                |
-| CP-04 | PASS / FAIL |                |
-| CP-05 | PASS / FAIL |                |
-| CP-06 | PASS / FAIL |                |
-| CP-07 | PASS / FAIL |                |
+| CP-01 | PASS / FAIL |     PASS       |
+| CP-02 | PASS / FAIL |     PASS       |
+| CP-03 | PASS / FAIL |        PASS        |
+| CP-04 | PASS / FAIL |        PASS        |
+| CP-05 | PASS / FAIL |        PASS        |
+| CP-06 | PASS / FAIL |        PASS        |
+| CP-07 | PASS / FAIL |        PASS        |
 
 ---
