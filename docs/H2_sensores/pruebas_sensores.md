@@ -97,7 +97,7 @@ El sensor se muestra en el LOGO
 
 ---
 
-### Caso de Prueba 5 – Posición inferior de cortina
+### Caso de Prueba 6 – Posición inferior de cortina
 **Condición inicial:**  
 Sensor magnético inferior inactivo
 
