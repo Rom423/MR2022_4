@@ -49,7 +49,23 @@ El PLC detecta la señal y ejecuta la acción programada.
 
 ---
 
-### Caso de Prueba 3 – Activación del sensor óptico
+### Caso de Prueba 3 – Detección correcta de sensor capacitivo
+**Condición inicial:**  
+Sistema en reposo, ninguna salida activa.
+
+**Estímulo:**  
+Colocar un objeto frente al sensor capacitivo (S1).
+
+**Resultado esperado:**  
+El PLC detecta la señal y ejecuta la acción programada.
+
+**Criterio PASS / FAIL:**  
+- **PASS:** Se activa correctamente el sensor y se muestra en el LOGO.  
+- **FAIL:** No se detecta respuesta o se generan activaciones tardías.
+
+---
+
+### Caso de Prueba 4 – Activación del sensor óptico
 **Condición inicial:**  
 Sistema en operación normal.
 
@@ -65,39 +81,39 @@ Cambio inmediato en el estado lógico del sistema.
 
 ---
 
-### Caso de Prueba 4 – Posición superior de cortina
+### Caso de Prueba 5 – Posición superior de cortina
 **Condición inicial:**  
-Cortina en movimiento hacia arriba.
+Sensor magnético superior inactivo
 
 **Estímulo:**  
 Activar el sensor magnético superior (S4).
 
 **Resultado esperado:**  
-Detención inmediata del movimiento.
+El sensor se muestra en el LOGO
 
 **Criterio PASS / FAIL:**  
-- **PASS:** El movimiento se detiene correctamente.  
-- **FAIL:** La cortina continúa su desplazamiento.
+- **PASS:** El sensor detecta correctamente.  
+- **FAIL:** El sensor no detecta.
 
 ---
 
 ### Caso de Prueba 5 – Posición inferior de cortina
 **Condición inicial:**  
-Cortina en movimiento hacia abajo.
+Sensor magnético inferior inactivo
 
 **Estímulo:**  
 Activar el sensor magnético inferior (S6).
 
 **Resultado esperado:**  
-El sistema detiene el movimiento y queda en reposo.
+El sensor se muestra en el LOGO
 
 **Criterio PASS / FAIL:**  
-- **PASS:** El sistema se detiene sin errores.  
-- **FAIL:** No se detiene o se genera una acción incorrecta.
+- **PASS:** El sensor detecta correctamente.
+- **FAIL:** El sensor no detecta.
 
 ---
 
-### Caso de Prueba 6 – Caso límite: activación simultánea de sensores
+### Caso de Prueba 7 – Caso límite: activación simultánea de sensores
 **Condición inicial:**  
 Sistema en funcionamiento normal.
 
@@ -110,22 +126,6 @@ El sistema responde para los dos sensores sin fallos.
 **Criterio PASS / FAIL:**  
 - **PASS:** El sistema responde de manera estable y segura.  
 - **FAIL:** Se generan errores, bloqueos o activaciones incorrectas.
-
----
-
-### Caso de Prueba 7 – Caso de fallo: desconexión de un sensor
-**Condición inicial:**  
-Sistema funcionando normalmente.
-
-**Estímulo:**  
-Desconectar físicamente el sensor óptico (S3).
-
-**Resultado esperado:**  
-El sistema detecta la anomalía o entra en estado seguro.
-
-**Criterio PASS / FAIL:**  
-- **PASS:** El sistema mantiene operación segura.  
-- **FAIL:** Se generan fallas, activaciones inesperadas o bloqueo del sistema.
 
 ---
 
