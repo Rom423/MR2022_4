@@ -24,7 +24,8 @@ Se energizó el sistema y se verificó la correcta detección de los sensores, a
 | ------------------------------------- | --------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
 | Diseñar el diagrama en draw.io    | Croquis a mano            | Permite mayor claridad, orden, facilidad de corrección y documentación del sistema. |
 | Uso de sensores industriales reales | Simulación únicamente         | Se buscó una experiencia práctica completa y validación real del funcionamiento del sistema. |
-| Separar alimentación y señales          | Conexión directa sin clembas | Mejora la seguridad, orden y mantenimiento del sistema. | Implementar protecciones en entradas y salidas    | Conexión directa sin protección           | Reduce el riesgo de daño al PLC y mejora la confiabilidad del sistema. |                                 |
+| Separar alimentación y señales          | Conexión directa sin clembas | Mejora la seguridad, orden y mantenimiento del sistema. 
+| Implementar protecciones en entradas y salidas    | Conexión directa sin protección           | Reduce el riesgo de daño al PLC y mejora la confiabilidad del sistema. |                                 |
 
 ## Problema técnico encontrado
 Describe un problema concreto.
