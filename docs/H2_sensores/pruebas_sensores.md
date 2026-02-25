@@ -148,3 +148,104 @@ El sistema responde para los dos sensores sin fallos.
 | CP-07 | PASS / FAIL |        PASS        |
 
 ---
+# Registro de Pruebas Reales de Sensores
+
+## Objetivo
+Documentar la ejecución de al menos **tres pruebas reales** sobre el sistema, registrando los resultados **PASS / FAIL**, observaciones técnicas relevantes (ruido, falsas detecciones, repetibilidad) y conclusiones sobre el comportamiento de los sensores.
+
+---
+
+## Descripción del Sensor Evaluado
+- **Tipo de sensor:**  
+- **Modelo:**  
+- **Ubicación en el sistema:**  
+- **Variable medida:**  
+
+---
+
+## Condiciones de Prueba
+- **Tensión de alimentación:**  
+- **Condiciones ambientales:**  
+- **Estado inicial del sistema:**  
+
+---
+
+## Pruebas Realizadas
+
+### Prueba 1
+**Condición inicial:**  
+
+**Procedimiento:**  
+
+**Resultado esperado:**  
+
+**Resultado obtenido:** PASS / FAIL  
+
+**Observaciones técnicas:**  
+- Ruido eléctrico:  
+- Falsas detecciones:  
+- Repetibilidad:  
+- Comentarios adicionales:  
+
+---
+
+### Prueba 2
+**Condición inicial:**  
+
+**Procedimiento:**  
+
+**Resultado esperado:**  
+
+**Resultado obtenido:** PASS / FAIL  
+
+**Observaciones técnicas:**  
+- Ruido eléctrico:  
+- Falsas detecciones:  
+- Repetibilidad:  
+- Comentarios adicionales:  
+
+---
+
+### Prueba 3
+**Condición inicial:**  
+
+**Procedimiento:**  
+
+**Resultado esperado:**  
+
+**Resultado obtenido:** PASS / FAIL  
+
+**Observaciones técnicas:**  
+- Ruido eléctrico:  
+- Falsas detecciones:  
+- Repetibilidad:  
+- Comentarios adicionales:  
+
+---
+
+## Tabla Resumen de Resultados
+
+| Prueba | Resultado | Ruido | Falsas detecciones | Repetibilidad | Observaciones |
+|-----------|-------------|---------|----------------------|----------------|----------------|
+| P-01 | PASS / FAIL |           |                      |                |                |
+| P-02 | PASS / FAIL |           |                      |                |                |
+| P-03 | PASS / FAIL |           |                      |                |                |
+
+---
+
+## Conclusiones Técnicas
+
+- **Comportamiento general del sensor:**  
+- **Estabilidad de la señal:**  
+- **Confiabilidad en la detección:**  
+- **Limitaciones observadas:**  
+- **Recomendaciones de mejora:**  
+
+---
+
+## Evidencias
+- Fotografías del montaje  
+- Videos de las pruebas  
+- Capturas del PLC en funcionamiento  
+
+---
