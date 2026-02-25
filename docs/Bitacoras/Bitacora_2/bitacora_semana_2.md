@@ -28,7 +28,7 @@ Se energizó el sistema y se verificó la correcta detección de los sensores, a
 | Implementar protecciones en entradas y salidas    | Conexión directa sin protección           | Reduce el riesgo de daño al PLC y mejora la confiabilidad del sistema. |                                 
 
 ## Problema técnico encontrado
-Describe un problema concreto.
+Durante el montaje inicial, se presentaron fallas en la lectura de algunos sensores, provocadas por errores en el cableado, polaridad incorrecta y conexiones cruzadas en las borneras. Además, algunos actuadores no respondían correctamente debido a errores en la asignación de salidas del PLC.
 
 ## Solución aplicada
 Explica cómo se resolvió.
