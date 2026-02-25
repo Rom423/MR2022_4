@@ -7,6 +7,7 @@
 **Análisis del problema:** Se elaboró el diagrama de conexiones en draw.io, identificando entradas, salidas, alimentación, sensores y actuadores, cuidando la correcta asignación de terminales y la organización del cableado.
 
 **Identificación de los componentes del sistema mecatrónico:** 
+
 **Sensores:** sensor capacitivo, sensor inductivo, sensor óptico, sensores magnéticos.
 **Actuadores:** Luces indicadoras (rojo, amarillo, verde) y motores.
 **Controlador** Módulo lógico Siemens LOGO! 12/24RCE
