@@ -1,4 +1,4 @@
-# Hito 2 – Selección de Componentes
+# Hito 2 – Prueba sensores
 
 ## Sensores seleccionados
 | Sensor | Variable | Tipo de señal | Justificación |
