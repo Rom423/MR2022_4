@@ -4,7 +4,7 @@
 
 | Sensor | Variable | Tipo de señal | Justificación |
 |---------|-----------|---------------|----------------|
-| **Magnético FESTO SME-8** | Posición del émbolo del cilindro neumático | Digital PNP/NPN (hasta 500 mA) | Sensor especializado para cilindros neumáticos. Tecnología Reed estándar industrial. Protección IP68. Permite alimentar directamente el LED verde del semáforo y la entrada del robot sin relés adicionales. Alta confiabilidad en ambientes húmedos o con aceite. |
+| **Magnético FESTO SME-8** | Posición del émbolo del cilindro neumático | Digital PNP/NPN (hasta 500 mA) | Tecnología Reed estándar industrial. Protección IP68. Permite alimentar directamente el LED verde del semáforo y la entrada del robot sin relés adicionales. Alta confiabilidad en ambientes húmedos o con aceite. |
 | **Inductivo LJ12A3** | Presencia de metal (cierre mecánico de cortina) | Digital NPN-NO | Detecta bordes metálicos a 4 mm con alta consistencia. Cuerpo de latón niquelado resistente. No se activa por humedad o contacto humano. Solución robusta y económica para confirmación de cierre metálico. |
 | **Capacitivo LJC18A3** | Presencia de materiales no metálicos (plástico, madera, líquido o aislamiento) | Digital NPN/PNP configurable | Permite detectar objetos no metálicos que el sensor inductivo no puede identificar. Cuerpo M18 con ajuste de sensibilidad (1–10 mm). Útil como sensor redundante o en aplicaciones para inicializar la actividad de la cortina.|
 | **Infrarrojo E3F-DS30P1** | Presencia de obstáculos/personas | Digital PNP/NPN | Funciona como cortina de luz de seguridad. Detecta objetos sin contacto físico (alcance 30 cm). Previene colisiones y protege tanto al motor como al personal durante el descenso de la cortina. |
