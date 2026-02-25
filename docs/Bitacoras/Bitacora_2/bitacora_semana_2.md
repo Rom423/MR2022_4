@@ -42,6 +42,6 @@ Además, se desarrolló el pensamiento ingenieril al diagnosticar fallas, propon
 
 ## Autoevaluación
 - ⬜ Muy perdido
-- ☑ Con dudas
-- ⬜ Entendiendo
+- ⬜ Con dudas
+- ☑ Entendiendo
 - ⬜ Dominando
