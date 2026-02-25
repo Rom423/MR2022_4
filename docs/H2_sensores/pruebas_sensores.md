@@ -105,7 +105,7 @@ Sistema en funcionamiento normal.
 Activar simultáneamente dos sensores (S1 y S2).
 
 **Resultado esperado:**  
-El sistema responde según la prioridad lógica programada sin fallos.
+El sistema responde para los dos sensores sin fallos.
 
 **Criterio PASS / FAIL:**  
 - **PASS:** El sistema responde de manera estable y segura.  
