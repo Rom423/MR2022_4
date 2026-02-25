@@ -249,3 +249,56 @@ Documentar la ejecución de al menos **tres pruebas reales** sobre el sistema, r
 - Capturas del PLC en funcionamiento  
 
 ---
+
+# Tabla I/O del Sistema
+
+## Objetivo
+Documentar la **tabla de entradas y salidas (I/O)** del sistema de control implementado con PLC Siemens LOGO! 12/24RCE, asegurando coherencia con los sensores seleccionados, indicando el **tipo de señal**, la **descripción funcional** y **notas técnicas relevantes derivadas de las pruebas reales**.
+
+---
+
+## Descripción General del Sistema
+- **Controlador:** Siemens LOGO! 12/24RCE  
+- **Tensión de control:** 24 VDC  
+- **Tipo de señales:** Digitales  
+- **Aplicación:** Sistema de control con sensores industriales y señalización mediante luces indicadoras.
+
+---
+
+## Tabla de Entradas (Inputs)
+
+| Dirección | Nombre | Tipo de Sensor | Tipo de Señal | Descripción Funcional | Notas Técnicas |
+|--------------|----------|----------------|------------------|--------------------------|------------------|
+| I1 | S1 | Sensor capacitivo | Digital 24V | Detecta presencia de objetos no metálicos para iniciar la secuencia del sistema. | Se observó alta estabilidad, sin falsas detecciones. Respuesta inmediata. |
+| I2 | S2 | Sensor inductivo | Digital 24V | Detecta objetos metálicos para activar la siguiente etapa del proceso. | Detección precisa; ligero retardo (<50 ms). No se presentó ruido eléctrico. |
+| I3 | S3 | Sensor óptico | Digital 24V | Detecta interrupción de haz luminoso para control de posición o presencia. | Presentó falsas detecciones ocasionales debido a luz ambiental intensa. |
+| I4 | S4 | Sensor magnético (cortina arriba) | Digital 24V | Detecta la posición superior de la cortina para detener el movimiento. | Alta repetibilidad y buena precisión en la detección. |
+| I5 | S5 | Sensor magnético (cortina medio) | Digital 24V | Detecta la posición intermedia de la cortina para control de secuencia. | Funcionamiento estable, sin errores durante las pruebas. |
+| I6 | S6 | Sensor magnético (cortina abajo) | Digital 24V | Detecta la posición inferior de la cortina para detener el movimiento. | Respuesta rápida y sin fallos detectados. |
+
+---
+
+## Tabla de Salidas (Outputs)
+
+| Dirección | Nombre | Tipo de Actuador | Tipo de Señal | Descripción Funcional | Notas Técnicas |
+|--------------|----------|--------------------|------------------|--------------------------|------------------|
+| Q1 | C4 | Luz indicadora LED | Digital 24V | Indica el estado activo de la primera etapa del proceso. | Encendido estable, sin parpadeos ni caídas de tensión. |
+| Q2 | C5 | Luz indicadora LED | Digital 24V | Señaliza la segunda etapa del proceso. | Funcionamiento continuo sin sobrecalentamiento. |
+| Q3 | C6 | Luz indicadora LED | Digital 24V | Indica estado final o condición de paro del sistema. | Respuesta inmediata al cambio lógico del PLC. |
+
+---
+
+## Observaciones Generales
+
+- El sistema presenta **alta confiabilidad operativa** bajo condiciones normales de trabajo.
+- Se detectó **ligera sensibilidad del sensor óptico a la luz ambiental**, por lo que se recomienda protección mecánica o ajuste de sensibilidad.
+- La repetibilidad de las señales fue superior al **98%**, sin errores críticos.
+- La organización del cableado redujo significativamente el ruido eléctrico.
+
+---
+
+## Conclusión
+
+La tabla I/O refleja correctamente la integración física y lógica del sistema. Las pruebas realizadas confirman que los sensores seleccionados cumplen adecuadamente su función, permitiendo un control confiable, estable y seguro del proceso.
+
+---
