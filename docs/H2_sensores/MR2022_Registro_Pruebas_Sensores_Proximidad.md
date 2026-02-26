@@ -6,10 +6,11 @@
 
 ## Equipo: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 
-## Integrantes: Mauricio Rodríguez Martínez
-##              Esteban Armando Ramírez Aviña
-##              Massimo Orozco Ocampo
-##              Juan Arturo López Delgado
+## Integrantes:
+## Mauricio Rodríguez Martínez
+## Esteban Armando Ramírez Aviña
+## Massimo Orozco Ocampo
+## Juan Arturo López Delgado
 
 ## Fecha: 23 de febrero de 2026
 
