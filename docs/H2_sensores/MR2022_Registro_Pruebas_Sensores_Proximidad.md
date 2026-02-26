@@ -4,7 +4,7 @@
 
 ## Práctica: Conexión y validación de sensores con Siemens LOGO
 
-## Equipo: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+## Equipo: Camilovers
 
 ## Integrantes:
 ## Mauricio Rodríguez Martínez
