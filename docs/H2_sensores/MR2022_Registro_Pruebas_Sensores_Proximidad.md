@@ -113,9 +113,8 @@ La implementación del sistema de cortina industrial es técnicamente viable med
 
 # 8️⃣ Evidencia
 
--   Fotografías del montaje:
--   Capturas del programa en LOGO:
--   Video corto de funcionamiento:
+Link montaje de circuito: https://drive.google.com/drive/folders/1qefwMG4qevhRWM73zRionAgeL4Zn5A-k
+
 ## Tabla Comparativa
 
 | Especificación | FESTO SME-8-K-DS-24V | LJ12A3-4-Z/BX | LJC18A3-B-Z/BX | E3F-DS30P1 |
