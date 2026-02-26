@@ -72,7 +72,7 @@
 ## 5. Análisis Técnico del Equipo
 
 ### 5.1 ¿Coincide la distancia real con la nominal?
-**Respuesta:** No del todo. La distancia experimental suele ser ligeramente menor debido a la histéresis del sensor y a que las condiciones de laboratorio (limpieza del material, temperatura) varían respecto a las pruebas controladas del fabricante.
+**Respuesta:** No del todo. La distancia experimental suele ser ligeramente menor debido a que las condiciones de laboratorio (limpieza del material, temperatura) varían respecto a las pruebas controladas del fabricante.
 
 ### 5.2 ¿Qué fenómeno físico explica el comportamiento observado?
 **Respuesta:** - **Inductivo:** Corrientes de Foucault que absorben energía del campo magnético.
@@ -107,11 +107,6 @@
 
 ## 7. Conclusión Ingenieril
 Se recomienda la implementación del **sensor inductivo** para el control de posición y el **infrarrojo** para seguridad. La principal restricción industrial es la acumulación de suciedad en los lentes del sensor óptico, lo que requeriría mantenimiento preventivo periódico.
-
----
-
-## 9. Bitácora de Aprendizaje
-**¿Qué aprendieron técnicamente?** Aprendimos a diferenciar que no todos los sensores de proximidad funcionan para todos los materiales y la importancia de los factores de reducción (derating) cuando se usan metales no ferrosos como el aluminio.
 
 ------------------------------------------------------------------------
 
