@@ -106,7 +106,8 @@
 ---
 
 ## 7. Conclusión Ingenieril
-Se recomienda la implementación del **sensor inductivo** para el control de posición y el **infrarrojo** para seguridad. La principal restricción industrial es la acumulación de suciedad en los lentes del sensor óptico, lo que requeriría mantenimiento preventivo periódico.
+
+### La implementación del sistema de cortina industrial es técnicamente viable mediante la integración estratégica de sensores inductivos para el control de precisión y sensores infrarrojos para la seguridad operativa. Se recomienda el uso del sensor inductivo LJ12A3 como final de carrera debido a su alta repetibilidad y robustez ante contaminantes ambientales, mientras que el sensor óptico E3F-DS30P1 resulta indispensable para la protección de usuarios gracias a su rango de detección extendido. No obstante, deben considerarse restricciones críticas como la sensibilidad de los sensores capacitivos ante la humedad y la vulnerabilidad del sensor infrarrojo frente a la acumulación de polvo o luz solar directa, factores que podrían derivar en fallos de detección o paros no programados. En conclusión, el éxito del diseño depende de mitigar riesgos industriales como la desalineación mecánica por vibración y la histéresis en los puntos de conmutación, asegurando una integración robusta con la lógica de control del PLC LOGO! para garantizar la integridad estructural y la continuidad del proceso automatizado.
 
 ------------------------------------------------------------------------
 
@@ -124,9 +125,7 @@ Se recomienda la implementación del **sensor inductivo** para el control de pos
 ¿Qué aprendieron técnicamente sobre sensores de proximidad que no sabían
 antes?
 
-Respuesta:
+Respuesta: A través de esta práctica, se comprendió de manera técnica que la selección de un sensor de proximidad no depende únicamente de la distancia, sino de la interacción física específica entre el principio de funcionamiento del dispositivo y las propiedades del material objetivo, como la permeabilidad magnética en sensores inductivos o la constante dieléctrica en los capacitivos. Se asimiló el concepto crítico de factor de reducción, identificando cómo metales no ferrosos como el aluminio disminuyen drásticamente el alcance efectivo de sensores diseñados para acero. Finalmente, se aprendió a interpretar y validar experimentalmente la histéresis y las zonas de inestabilidad, conocimientos fundamentales para programar filtros digitales o tiempos de guarda en el PLC LOGO! que eviten falsos disparos en entornos industriales reales.
 
 ------------------------------------------------------------------------
 
-> ⚙️ Este documento forma parte del proceso de validación experimental
-> para la selección de sensores dentro del proyecto integrador MR2022.
