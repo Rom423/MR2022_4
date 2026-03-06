@@ -1,4 +1,4 @@
-# Bitácora – Semana X
+# Bitácora – Semana 3
 
 ## Tema de la semana
 (Sensores / Actuadores / Control / HMI)
