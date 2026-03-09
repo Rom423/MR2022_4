@@ -1,50 +1,137 @@
 # Hito 3 – Control e Integración
 
 ## Descripción de la lógica de control
-La lógica de control fue implementada en el PLC **Siemens LOGO!** para controlar el movimiento de una cortina mediante un **motor DC bidireccional**.
 
-El sistema utiliza sensores para detectar el estado de la cortina y controlar el movimiento del motor. Dependiendo de las señales recibidas por las entradas del PLC, se activan las salidas que controlan los relevadores del motor.
+La lógica de control fue implementada en un PLC Siemens LOGO! utilizando el software Siemens LOGO! Soft Comfort. El sistema controla el movimiento de una cortina de seguridad mediante un motor DC bidireccional.
 
-Las salidas **Q1 y Q2** controlan el movimiento del motor:
+El PLC recibe señales de sensores de posición y de un sensor de presencia. Con base en estas señales, el programa activa las salidas correspondientes que controlan relevadores encargados de energizar el motor en cada dirección.
 
-- **Q1:** activa el motor para subir la cortina  
-- **Q2:** activa el motor para bajar la cortina  
+Las salidas principales del sistema son:
 
-Se implementó un **interlock lógico** que evita que ambas salidas se activen al mismo tiempo, cumpliendo la condición de **no subir y bajar simultáneamente**.
+- **Q1:** activa el motor para **subir la cortina**
+- **Q2:** activa el motor para **bajar la cortina**
 
-Además, el sistema incluye señalización visual mediante una torre de luz:
+Se implementó un **interlock lógico** que evita que ambas direcciones del motor se activen simultáneamente, evitando daños en el motor o en los relevadores.
 
-- **Q3:** luz roja cuando el sistema está en proceso  
-- **Q4:** luz verde cuando el sistema está listo  
+El sistema también incluye señalización visual mediante una torre de luz:
 
-Los sensores permiten detectar la posición de la cortina (arriba, medio y abajo), lo cual ayuda a controlar el movimiento y evitar que el motor continúe funcionando cuando se alcanza un límite.
+- **Q3:** luz roja cuando el sistema está en proceso
+- **Q4:** luz verde cuando el sistema está listo o habilitado para operar
+
+Además, un **sensor de presencia** detiene inmediatamente cualquier movimiento si detecta una persona cerca de la cortina.
+
+Los sensores de posición permiten detectar cuando la cortina se encuentra:
+
+- completamente arriba
+- en posición intermedia
+- completamente abajo
+
+Esto permite detener el motor automáticamente al alcanzar los límites mecánicos.
 
 ---
 
-## Entradas y salidas
+# Entradas y salidas
+
+## Entradas
 
 | Entrada | Tipo | Función |
-|--------|------|---------|
-| I1 | Sensor | Sensor capacitivo |
-| I2 | Sensor | Sensor inductivo |
-| I3 | Sensor | Sensor fotoeléctrico |
-| I4 | Sensor | Sensor cortina arriba |
-| I5 | Sensor | Sensor cortina en medio |
-| I6 | Sensor | Sensor cortina abajo |
+|------|------|------|
+| I1 | Sensor | Sensor de presencia (1 = zona libre, 0 = persona detectada) |
+| I2 | Sensor | Sensor cortina arriba |
+| I3 | Sensor | Sensor cortina intermedia |
+| I4 | Sensor | Sensor cortina abajo |
+| I5 | Pulsador | Pulsador de inicio |
+
+---
+
+## Salidas
 
 | Salida | Tipo | Función |
-|--------|------|---------|
+|------|------|------|
 | Q1 | Actuador | Motor subir |
 | Q2 | Actuador | Motor bajar |
 | Q3 | Indicador | Lámpara roja (proceso) |
-| Q4 | Indicador | Lámpara verde (listo) |
+| Q4 | Indicador | Lámpara verde (operación permitida) |
 
 ---
 
-## Pruebas realizadas
+# Ecuaciones lógicas del sistema
+
+## Motor bajar
+
+Activación del motor para bajar la cortina:
+
+```
+SET(M_bajar) = P • S1 • S2
+RESET(M_bajar) = S4
+Q2 = M_bajar • S1 • ¬M_subir
+```
+
+---
+
+## Temporizador
+
+El temporizador inicia cuando la cortina llega a la posición inferior y no hay presencia detectada.
+
+```
+T_IN = S4 • S1
+T = TON(10 s)
+```
+
+---
+
+## Motor subir
+
+El motor de subida se activa automáticamente cuando el temporizador termina.
+
+```
+SET(M_subir) = T
+RESET(M_subir) = S2
+Q1 = M_subir • S1 • ¬M_bajar
+```
+
+---
+
+## Permisivo del sistema
+
+El sistema puede operar únicamente cuando la cortina está abajo y el temporizador aún no ha finalizado.
+
+```
+R = S4 • S1 • ¬T
+```
+
+---
+
+## Señalización visual
+
+```
+Q4 = R
+Q3 = ¬R
+```
+
+---
+
+# Tabla de verdad simplificada
+
+| Estado | S1 | S2 | S3 | S4 | P | T | Q1 Subir | Q2 Bajar | Q3 Roja | Q4 Verde | Descripción |
+|------|------|------|------|------|------|------|------|------|------|------|------|
+| Inicial | 1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | Cortina arriba |
+| Inicio | 1 | 1 | 0 | 0 | 1 | 0 | 0 | 1 | 1 | 0 | Cortina bajando |
+| Intermedio | 1 | 0 | 1 | 0 | 0 | 0 | 0 | 1 | 1 | 0 | Movimiento descendente |
+| Abajo | 1 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 1 | Sistema habilitado |
+| Temporizador | 1 | 0 | 0 | 1 | 0 | 1 | 1 | 0 | 1 | 0 | Cortina subiendo |
+| Subiendo | 1 | 0 | 1 | 0 | 0 | 0 | 1 | 0 | 1 | 0 | Movimiento ascendente |
+| Final | 1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | Regreso al estado inicial |
+| Seguridad | 0 | * | * | * | * | * | 0 | 0 | 1 | 0 | Persona detectada |
+
+*El símbolo `*` indica que el valor de la entrada no afecta el resultado.*
+
+---
+
+# Pruebas realizadas
 
 | Prueba | Resultado esperado | Resultado obtenido |
-|------|------------------|------------------|
+|------|------|------|
 | Activar subida del motor | El motor debe subir la cortina | Inicialmente el motor no respondió |
 | Revisión del cableado del motor | El motor debería activarse correctamente | Se detectó un problema en la conexión |
 | Nueva prueba de subida | El motor debe subir la cortina | Funcionamiento correcto después del ajuste |
@@ -53,23 +140,24 @@ Los sensores permiten detectar la posición de la cortina (arriba, medio y abajo
 | Verificar sensores de posición | Cada sensor debe enviar señal correcta | Se detectó que algunos sensores estaban invertidos |
 | Corrección de conexión de sensores | Los sensores deben detectar correctamente | Los sensores comenzaron a responder correctamente |
 | Prueba de detección de sensores | El PLC debe recibir señales estables | Se detectaron señales falsas en algunos sensores |
-| Revisión del sistema | El sistema debe operar de forma estable | Después de ajustes en la lógica, el sistema funcionó correctamente |
+| Revisión del sistema | El sistema debe operar de forma estable | Después de ajustes en la lógica el sistema funcionó correctamente |
 | Prueba de señalización | Luz roja en proceso y verde en reposo | Funcionamiento correcto |
 
 ---
 
-## Ajustes realizados
-Durante las pruebas se detectaron varios problemas que requirieron ajustes en el sistema.
+# Ajustes realizados
 
-En una de las primeras pruebas el **motor no respondía correctamente**, por lo que se revisó el cableado y las conexiones de los relevadores. Después de ajustar las conexiones se logró activar el motor.
+Durante las pruebas de integración se detectaron diversos problemas que requirieron ajustes tanto en el hardware como en la lógica de control.
 
-También se detectó que **algunos sensores estaban conectados de forma invertida**, lo que provocaba lecturas incorrectas en el PLC. Se corrigieron las conexiones para que cada sensor correspondiera a su entrada correcta.
+Inicialmente el motor no respondía correctamente. Se realizó una revisión completa del cableado del motor y de los relevadores de potencia. Después de corregir las conexiones se logró activar el motor correctamente.
 
-Además, algunos sensores presentaban **detecciones falsas**, lo que generaba activaciones inesperadas. Para solucionar esto se realizaron las siguientes acciones:
+Posteriormente se detectó que algunos sensores estaban conectados a entradas incorrectas del PLC, lo que provocaba lecturas invertidas en el sistema. Se reorganizaron las conexiones para que cada sensor correspondiera a su entrada definida en la programación.
 
-- Se realizó un **reset del PLC LOGO!**  
-- Se revisó y reconectó el cableado de sensores  
-- Se realizaron **ajustes en la lógica de programación** en LOGO! Soft Comfort  
-- Se repitieron varias pruebas hasta obtener un funcionamiento más estable del sistema
+También se observaron activaciones falsas en algunos sensores. Para solucionar este problema se realizaron las siguientes acciones:
 
-El proceso incluyó varias iteraciones de prueba y corrección hasta lograr que el sistema operara de forma correcta.
+- reinicio del PLC LOGO!
+- revisión y reconexión del cableado de sensores
+- ajustes en la lógica de programación en Siemens LOGO! Soft Comfort
+- repetición de pruebas funcionales
+
+Después de varias iteraciones de prueba y corrección, el sistema alcanzó un funcionamiento estable y consistente.
