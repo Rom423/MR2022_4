@@ -2,9 +2,9 @@
 
 ## Información general
 
-* **Equipo: 
-* **Integrantes: Juan Arturo López, Massimo Orozco, Mauricio Rodriguez, Esteban Ramirez 
-* **Semana / Hito:** H2
+* **Equipo:**
+* **Integrantes: Juan Arturo López, Massimo Orozco, Mauricio Rodriguez, Esteban Ramirez**
+* **Semana / Hito:** H3
 * **Fecha:**
 
 ---
