@@ -10,12 +10,19 @@ El sistema resuelve la necesidad de automatizar cortinas industriales utilizadas
 
 ## Componentes utilizados
 -Sensor inductivo (LJ12A3): Detecta el cierre mecánico de la cortina mediante bordes metálicos.
+
 -Sensor capacitivo (LJC18A3): Redundancia para detectar objetos no metálicos.
+
 -Sensor óptico/Infrarrojo (E3F-DS30P1): Funciona como barrera de seguridad para detección de personas/obstáculos.
+
 -Sensor magnético (FESTO SME-8): Identifica la posición del émbolo (utilizado en el contexto de integración).
+
 -Siemens LOGO! V8: Cerebro del sistema que procesa la lógica programada en LOGO!Soft Comfort.
+
 -Relés: Actúan como interfaz de potencia para el manejo del motor.
+
 -Motor DC 24V: Actuador rotatorio para el enrollado/desenrollado de la malla.
+
 -Torre de luces: Señalización visual (Roja: Proceso / Verde: Operación permitida).
 
 ## Lógica de control
@@ -26,15 +33,15 @@ El sistema resuelve la necesidad de automatizar cortinas industriales utilizadas
 
 ## Resultados de pruebas
 
-| Prueba | Resultado Esperado | Resultado Obtenido |
+| Prueba | Resultado Esperado | Resultado Obtenido | Estado |
 | :--- | :--- | :--- | :---: |
-| **Accionamiento de Subida** | El motor debe enrollar la cortina hasta el límite superior. | El motor operó correctamente tras ajustar el cableado inicial. |
-| **Accionamiento de Bajada** | El motor debe desenrollar la cortina hasta el límite inferior. | Funcionamiento correcto y fluido del mecanismo. |
-| **Interlock Lógico** | Al presionar subir y bajar simultáneamente, el sistema debe bloquear una salida. | El bloqueo lógico evitó cortocircuitos o daños en los relevadores. |
-| **Seguridad (Sensor Óptico)** | Detener o invertir la marcha al detectar presencia (S1). | El sistema se detuvo inmediatamente al detectar un obstáculo. |
-| **Límites de Carrera** | Detención automática al tocar los sensores de posición (S2, S4). | Sensores ajustados; el motor se detiene con precisión en los extremos. |
-| **Señalización Visual** | Luz roja en movimiento y verde cuando el sistema está listo. | La torre de luces cambió de estado según la lógica programada. |
-| **Detección de Objetos** | Identificación de materiales metálicos y no metálicos. | Los sensores inductivos y capacitivos enviaron señales estables al PLC. |
+| **Accionamiento de Subida** | El motor debe enrollar la cortina hasta el límite superior. | El motor operó correctamente tras ajustar el cableado inicial. | ✅ |
+| **Accionamiento de Bajada** | El motor debe desenrollar la cortina hasta el límite inferior. | Funcionamiento correcto y fluido del mecanismo. | ✅ |
+| **Interlock Lógico** | Al presionar subir y bajar simultáneamente, el sistema debe bloquear una salida. | El bloqueo lógico evitó cortocircuitos o daños en los relevadores. | ✅ |
+| **Seguridad (Sensor Óptico)** | Detener o invertir la marcha al detectar presencia (S1). | El sistema se detuvo inmediatamente al detectar un obstáculo. | ✅ |
+| **Límites de Carrera** | Detención automática al tocar los sensores de posición (S2, S4). | Sensores ajustados; el motor se detiene con precisión en los extremos. | ✅ |
+| **Señalización Visual** | Luz roja en movimiento y verde cuando el sistema está listo. | La torre de luces cambió de estado según la lógica programada. | ✅ |
+| **Detección de Objetos** | Identificación de materiales metálicos y no metálicos. | Los sensores inductivos y capacitivos enviaron señales estables al PLC. | ✅ |
 
 ### Ajustes realizados durante la validación
 * **Corrección de Entradas:** Se reordenó el cableado de los sensores que presentaban señales invertidas en el PLC.
@@ -42,7 +49,7 @@ El sistema resuelve la necesidad de automatizar cortinas industriales utilizadas
 * **Refuerzo de Seguridad:** Se cambió la lógica de una condición `OR` a una `AND` para obligar al cumplimiento de todos los parámetros de seguridad antes de permitir el movimiento.
 
 ## Video demo
-[(link al video)](https://drive.google.com/drive/folders/1lUZ8vjKWCCX4IU89RD9iuzFqbE6-UiJB?usp=sharing)
+[(VIDEO DEMO)](https://drive.google.com/drive/folders/1lUZ8vjKWCCX4IU89RD9iuzFqbE6-UiJB?usp=sharing)
 
 ## Equipo
 Mauricio Rodríguez Martínez
