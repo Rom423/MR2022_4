@@ -27,6 +27,18 @@ Los sensores de posición permiten detectar cuando la cortina se encuentra:
 - completamente abajo
 
 Esto permite detener el motor automáticamente al alcanzar los límites mecánicos.
+---
+
+# Diagrama de conexión del sistema
+
+A continuación se muestra el diagrama eléctrico general del sistema de control implementado para la cortina industrial. En este diagrama se pueden observar las conexiones entre el PLC Siemens LOGO!, los sensores de posición, el sensor de presencia, los relevadores de potencia y el motor DC que acciona la cortina.
+
+Este diagrama fue utilizado durante la etapa de integración para verificar las conexiones de entradas, salidas y alimentación del sistema.
+
+<img width="961" height="740" alt="image" src="https://github.com/user-attachments/assets/5cd50df2-420f-4495-8cb7-e45e62b30724" />
+
+
+---
 
 ---
 
