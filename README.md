@@ -55,11 +55,11 @@ El sistema resuelve la necesidad de automatizar cortinas industriales utilizadas
 [(VIDEO DEMO)](https://drive.google.com/drive/folders/1lUZ8vjKWCCX4IU89RD9iuzFqbE6-UiJB?usp=sharing)
 
 ## Equipo
-Mauricio Rodríguez Martínez
+Mauricio Rodríguez Martínez - A00574719@tec.mx
 
-Esteban Armando Ramírez Aviña
+Esteban Armando Ramírez Aviña - A00842551@tec.mx
 
-Massimo Orozco Ocampo
+Massimo Orozco Ocampo - A00574797@tec.mx
 
-Juan Arturo López Delgado
+Juan Arturo López Delgado - A00573486@tec.mx
 
