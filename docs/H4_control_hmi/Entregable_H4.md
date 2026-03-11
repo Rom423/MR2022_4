@@ -1,4 +1,4 @@
-# Hito 4 – Control + HMI + Validación
+# Hito 4 – Control + Validación
 
 ## Descripción general del sistema
 
@@ -178,3 +178,5 @@ La implementación de una máquina de estados permitió estructurar el comportam
 Las pruebas realizadas permitieron validar el funcionamiento del sistema y detectar diversos problemas técnicos durante la etapa de integración.
 
 Aunque el sistema responde correctamente a nivel lógico, se identificó que la velocidad del motor es mayor a la requerida para el sistema, lo que representa una oportunidad de mejora futura mediante control de velocidad o ajustes mecánicos.
+
+Como comentario final, con ayuda de Claude, creamos un HMI para simular los estados de la cortina, sin embargo presenta algunos errores al momento de ejecutarrse, adjuntamos el código para cualquier prueba o revisión.
