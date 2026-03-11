@@ -27,8 +27,11 @@ El sistema resuelve la necesidad de automatizar cortinas industriales utilizadas
 
 ## Lógica de control
 -Descenso: Se activa por pulsador siempre que la zona esté libre.
+
 -Seguridad: Si se detecta un objeto durante el descenso, el sistema invierte la marcha inmediatamente hacia el ascenso total.
+
 -Límites: Sensores de posición (arriba, intermedio, abajo) detienen el motor automáticamente al alcanzar los extremos mecánicos.
+
 -Interlock: Existe un bloqueo lógico que impide que las bobinas de "subir" y "bajar" se activen al mismo tiempo.
 
 ## Resultados de pruebas
@@ -53,7 +56,10 @@ El sistema resuelve la necesidad de automatizar cortinas industriales utilizadas
 
 ## Equipo
 Mauricio Rodríguez Martínez
+
 Esteban Armando Ramírez Aviña
+
 Massimo Orozco Ocampo
+
 Juan Arturo López Delgado
 
