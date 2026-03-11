@@ -6,9 +6,7 @@
 El sistema resuelve la necesidad de automatizar cortinas industriales utilizadas para la segregación de espacios y control de accesos. El desafío principal es la gestión de seguridad de cargas pesadas, mitigando riesgos de accidentes con personal y vehículos en zonas de alto tránsito logístico mediante el uso de un prototipo a escala.
 
 ## Arquitectura del sistema
-Insertar un diagrama de bloques.
-
-[Sensores] → [Siemens LOGO] → [Relés] → [Motor DC]
+![WhatsApp Image 2026-02-18 at 22 47 49](https://github.com/user-attachments/assets/c742ab71-91f4-4402-815d-bf1609a1cda5)
 
 ## Componentes utilizados
 -Sensor inductivo (LJ12A3): Detecta el cierre mecánico de la cortina mediante bordes metálicos.
@@ -28,7 +26,7 @@ Insertar un diagrama de bloques.
 
 ## Resultados de pruebas
 
-| Prueba | Resultado Esperado | Resultado Obtenido | Estado |
+| Prueba | Resultado Esperado | Resultado Obtenido |
 | :--- | :--- | :--- | :---: |
 | **Accionamiento de Subida** | El motor debe enrollar la cortina hasta el límite superior. | El motor operó correctamente tras ajustar el cableado inicial. |
 | **Accionamiento de Bajada** | El motor debe desenrollar la cortina hasta el límite inferior. | Funcionamiento correcto y fluido del mecanismo. |
@@ -44,7 +42,7 @@ Insertar un diagrama de bloques.
 * **Refuerzo de Seguridad:** Se cambió la lógica de una condición `OR` a una `AND` para obligar al cumplimiento de todos los parámetros de seguridad antes de permitir el movimiento.
 
 ## Video demo
-(link al video)
+[(link al video)](https://drive.google.com/drive/folders/1lUZ8vjKWCCX4IU89RD9iuzFqbE6-UiJB?usp=sharing)
 
 ## Equipo
 Mauricio Rodríguez Martínez
