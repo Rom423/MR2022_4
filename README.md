@@ -30,5 +30,8 @@ Tabla de detección de sensores o pruebas del sistema.
 (link al video)
 
 ## Equipo
-Integrantes del proyecto.
+Mauricio Rodríguez Martínez
+Esteban Armando Ramírez Aviña
+Massimo Orozco Ocampo
+Juan Arturo López Delgado
 
