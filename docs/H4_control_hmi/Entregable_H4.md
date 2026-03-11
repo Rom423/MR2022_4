@@ -59,36 +59,10 @@ Motorreductor DC
 Movimiento de la cortina
 
 El PLC también controla la señalización visual del sistema mediante una torre de luz.
+<img width="955" height="664" alt="image" src="https://github.com/user-attachments/assets/680ad8d5-5149-4958-a152-434ec268b201" />
+
 
 ---
-
-# Diseño de HMI
-
-Para la validación del sistema se utilizó una **interfaz HMI simulada**, desarrollada para representar las señales de entrada y salida del sistema de control.
-
-Esta interfaz permite observar el comportamiento del sistema y simular eventos de sensores y activación del sistema.
-
-## Funciones de la interfaz
-
-La interfaz permite:
-
-- simular el pulsador de inicio
-- visualizar el estado de los sensores
-- observar la activación del motor
-- visualizar el estado de las luces indicadoras
-- validar el comportamiento de la lógica de control
-
-## Indicadores del sistema
-
-| Indicador | Función |
-|------|------|
-| Luz verde | Sistema listo para operar |
-| Luz roja | Sistema en proceso o en movimiento |
-
-La interfaz permite verificar el comportamiento del sistema durante los diferentes estados de operación.
-
----
-
 # Matriz de pruebas de validación
 
 Para validar el funcionamiento del sistema se definió una matriz de pruebas que incluye condiciones normales de operación y casos de seguridad.
@@ -112,7 +86,7 @@ Para validar el funcionamiento del sistema se definió una matriz de pruebas que
 
 # Ejecución de pruebas
 
-Durante la validación se realizaron múltiples pruebas del sistema utilizando la interfaz HMI simulada.
+Durante la validación se realizaron múltiples pruebas del sistema.
 
 | Prueba | Resultado |
 |------|------|
@@ -133,7 +107,7 @@ Durante la integración y validación del sistema se detectaron diversos problem
 
 ## 1 Incompatibilidad de firmware
 
-El PLC inicialmente no aceptaba el programa debido a que la **versión de firmware del dispositivo no coincidía con la versión del proyecto**.
+El PLC inicialmente no aceptaba el programa debido a que la **versión de firmware del dispositivo no coincidía con la versión del programa proporcionado**.
 
 **Solución**
 
@@ -157,7 +131,7 @@ El sensor no detectaba correctamente la posición debido a una **distancia insuf
 
 **Solución**
 
-Se realizaron ajustes mecánicos para mejorar la detección.
+Se realizaron ajustes mecánicos y de posicionamiento para mejorar la detección.
 
 ---
 
@@ -167,12 +141,16 @@ El motorreductor utilizado presenta una **velocidad mayor a la requerida**, lo q
 
 Actualmente el sistema funciona correctamente cuando el movimiento se controla manualmente, pero en operación automática la velocidad del motor genera inconsistencias en la detección de posición.
 
+**Solución**
+
+Para mitigar este problema durante las pruebas se **acortó la distancia de recorrido de la cortina**, de manera que el sistema pudiera detenerse dentro del rango de detección de los sensores.
+
+Este ajuste permitió mejorar la detección de posición durante la validación del sistema. Sin embargo, se identificó que una solución más robusta en futuras iteraciones sería implementar **control de velocidad del motor**, por ejemplo mediante un controlador PWM o un sistema de reducción mecánica adicional.
 ---
 
 # Evidencia de funcionamiento
 
-Para validar el comportamiento del sistema se realizaron pruebas utilizando la interfaz HMI simulada.
-
+Para validar el comportamiento del sistema se realizaron
 Se registraron capturas del sistema durante diferentes estados de operación.
 
 Con apoyo de **herramientas de inteligencia artificial**, se estructuró el proceso de validación y documentación de las pruebas realizadas.
@@ -187,7 +165,7 @@ Debido al tamaño de los archivos, los videos se encuentran almacenados en **Goo
 
 Enlace a evidencias:
 
-[Agregar enlace a carpeta de Google Drive]
+
 
 ---
 
@@ -197,6 +175,6 @@ El sistema de control de la cortina fue implementado exitosamente utilizando un 
 
 La implementación de una máquina de estados permitió estructurar el comportamiento del sistema de manera clara y segura.
 
-Las pruebas realizadas mediante la interfaz HMI simulada permitieron validar el funcionamiento del sistema y detectar diversos problemas técnicos durante la etapa de integración.
+Las pruebas realizadas permitieron validar el funcionamiento del sistema y detectar diversos problemas técnicos durante la etapa de integración.
 
 Aunque el sistema responde correctamente a nivel lógico, se identificó que la velocidad del motor es mayor a la requerida para el sistema, lo que representa una oportunidad de mejora futura mediante control de velocidad o ajustes mecánicos.
