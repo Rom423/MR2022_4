@@ -27,19 +27,16 @@ Insertar un diagrama de bloques.
 -Interlock: Existe un bloqueo lógico que impide que las bobinas de "subir" y "bajar" se activen al mismo tiempo.
 
 ## Resultados de pruebas
-## Resultados de pruebas
-
-Para garantizar la confiabilidad del sistema de cortina industrial, se realizaron pruebas de integración tanto en hardware como en software. A continuación, se detallan los resultados obtenidos:
 
 | Prueba | Resultado Esperado | Resultado Obtenido | Estado |
 | :--- | :--- | :--- | :---: |
-| **Accionamiento de Subida** | El motor debe enrollar la cortina hasta el límite superior. | El motor operó correctamente tras ajustar el cableado inicial. | ✅ |
-| **Accionamiento de Bajada** | El motor debe desenrollar la cortina hasta el límite inferior. | Funcionamiento correcto y fluido del mecanismo. | ✅ |
-| **Interlock Lógico** | Al presionar subir y bajar simultáneamente, el sistema debe bloquear una salida. | El bloqueo lógico evitó cortocircuitos o daños en los relevadores. | ✅ |
-| **Seguridad (Sensor Óptico)** | Detener o invertir la marcha al detectar presencia (S1). | El sistema se detuvo inmediatamente al detectar un obstáculo. | ✅ |
-| **Límites de Carrera** | Detención automática al tocar los sensores de posición (S2, S4). | Sensores ajustados; el motor se detiene con precisión en los extremos. | ✅ |
-| **Señalización Visual** | Luz roja en movimiento y verde cuando el sistema está listo. | La torre de luces cambió de estado según la lógica programada. | ✅ |
-| **Detección de Objetos** | Identificación de materiales metálicos y no metálicos. | Los sensores inductivos y capacitivos enviaron señales estables al PLC. | ✅ |
+| **Accionamiento de Subida** | El motor debe enrollar la cortina hasta el límite superior. | El motor operó correctamente tras ajustar el cableado inicial. |
+| **Accionamiento de Bajada** | El motor debe desenrollar la cortina hasta el límite inferior. | Funcionamiento correcto y fluido del mecanismo. |
+| **Interlock Lógico** | Al presionar subir y bajar simultáneamente, el sistema debe bloquear una salida. | El bloqueo lógico evitó cortocircuitos o daños en los relevadores. |
+| **Seguridad (Sensor Óptico)** | Detener o invertir la marcha al detectar presencia (S1). | El sistema se detuvo inmediatamente al detectar un obstáculo. |
+| **Límites de Carrera** | Detención automática al tocar los sensores de posición (S2, S4). | Sensores ajustados; el motor se detiene con precisión en los extremos. |
+| **Señalización Visual** | Luz roja en movimiento y verde cuando el sistema está listo. | La torre de luces cambió de estado según la lógica programada. |
+| **Detección de Objetos** | Identificación de materiales metálicos y no metálicos. | Los sensores inductivos y capacitivos enviaron señales estables al PLC. |
 
 ### Ajustes realizados durante la validación
 * **Corrección de Entradas:** Se reordenó el cableado de los sensores que presentaban señales invertidas en el PLC.
